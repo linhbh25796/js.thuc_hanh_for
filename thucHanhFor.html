@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng vòng lặp for</title>
+</head>
+<body>
+<p>
+    Bài 1: Viết chương trình hiển thị chuỗi “The number is N” 5 lần sử dụng vòng lặp for. Với N sẽ hiển thị từ 0 đến 5. <br>
+    Bài 2: Viết chương trình nhập vào một số bất kỳ lớn hơn 0. Tính tổng các phần tử từ 1 đến số vừa nhập vào.
+</p>
+<button type="button" onclick="bai1()">Bài 1</button>
+<button type="button" onclick="bai2()">Bài 2</button>
+<p id="result1"></p>
+<p id="result2"></p>
+<script>
+
+    function bai1() {
+        let text = "";
+        let i;
+        for (i = 0; i < 5; i++) {
+            text += "The number is " + i + "<br>";
+        }
+        document.getElementById("result1").innerHTML = "Kết quả bài 1 <br>" +text;
+    }
+
+    function bai2() {
+        let num = prompt("Enter your number: ");
+        let total = 0 ;
+        for (let i =1; i<= num; i++){
+            total = total + i ;
+        }
+        document.getElementById("result2").innerHTML = "Kết quả bài 2 <br>" +"Số từ 1 đến "+num +" có tổng = " +total;
+    }
+</script>
+</body>
+</html>
